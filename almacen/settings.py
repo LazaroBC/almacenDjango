@@ -55,7 +55,9 @@ ROOT_URLCONF = 'almacen.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'almacen/templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

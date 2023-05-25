@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Lista Cliente</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Lista Cliente</h1>
+        </header>
+        <form action="post">
+            <div class="mb-3">
+                <label for="idCliente" class="form-label">ID Cliente</label>
+                <input type="text" class="form-control" id="idCliente" name="idCliente" aria-describedby="idCliente">
+            </div>
+            <div class="mb-3">
+                <label for="nombreCliente" class="form-label">Nombre Cliente</label>
+                <input type="text" class="form-control" id="nombreCliente" name="nombreCliente"
+                    aria-describedby="nombreCliente">
+            </div>
+            <div class="mb-3">
+                <label for="apellidosCliente" class="form-label">Apellidos Cliente</label>
+                <input type="text" class="form-control" id="apellidosCliente" name="apellidosCliente"
+                    aria-describedby="apellidosCliente">
+            </div>
+            <div class="mb-3">
+                <label for="correoCliente" class="form-label">Correo Cliente</label>
+                <input type="mail" class="form-control" id="correoCliente" name="correoCliente"
+                    aria-describedby="correoCliente">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>

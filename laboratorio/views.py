@@ -4,6 +4,10 @@ from django.http import HttpResponse
 # Create your views here.
 
 def inicio(request):
-    return HttpResponse("<!DOCTYPE html><head><title>Document</title></head><body><h1>Almacen Laboratorio</h1></body></html>")
-def inicio2(request):
-    return render(request, 'inicio2.html')
+    return render(request, 'inicio.html')
+
+def producto(request):
+    return render(request, 'producto.html')
+
+def altaProducto(request):
+    return render(request, 'altaProducto.html')

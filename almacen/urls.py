@@ -23,5 +23,8 @@ urlpatterns = [
     path('', include('laboratorio.urls')),
     path('inicio/', include('laboratorio.urls')),
     path('producto/', include('laboratorio.urls')),
-    path('producto/altaProducto/', include('laboratorio.urls')),
+    path('altaProducto/', include('laboratorio.urls')),
+    path('bajaProducto/', include('laboratorio.urls')),
+    path('cambioProducto/', include('laboratorio.urls')),
+    path('listaProducto/', include('laboratorio.urls')),
 ]

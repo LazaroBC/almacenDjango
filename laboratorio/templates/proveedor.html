@@ -13,11 +13,11 @@
             <h1>Proveedor</h1>
         </header>
         <nav>
-            <a href="" class="btn btn-primary">INICIO</a>
-            <a href="" class="btn btn-primary">ALTA</a>
-            <a href="" class="btn btn-primary">MODIFICACIÓN</a>
-            <a href="" class="btn btn-primary">BAJA</a>
-            <a href="" class="btn btn-primary">LISTA</a>
+            <a href="{% url 'inicio.html' %}" class="btn btn-primary">INICIO</a>
+            <a href="{% url 'altaProveedor.html' %}" class="btn btn-primary">ALTA</a>
+            <a href="{% url 'cambioProveedor.html' %}" class="btn btn-primary">MODIFICACIÓN</a>
+            <a href="{% url 'bajaProveedor.html' %}" class="btn btn-primary">BAJA</a>
+            <a href="{% url 'listaProveedor.html' %}" class="btn btn-primary">LISTA</a>
         </nav>
     </div>
 </body>

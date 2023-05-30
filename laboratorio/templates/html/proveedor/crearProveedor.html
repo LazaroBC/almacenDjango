@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block titulo %}Crear--Proveedor{% endblock %}
+{% block contenido %}
+
+
+<div class="card">
+    <div class="card-header">
+        Crear Proveedor
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos del Proveedor</h4>
+        {% include 'html/proveedor/formProveedor.html' %}
+    </div>
+    <div class="card-footer text-muted">
+        <a class="nav-item nav-link" href="{% url 'listaProveedor' %}">Lista Proveedor</a>
+    </div>
+</div>
+
+
+{% endblock %}

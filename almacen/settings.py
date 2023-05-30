@@ -56,7 +56,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            'almacen/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {

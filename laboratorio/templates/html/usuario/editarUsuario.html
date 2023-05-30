@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block titulo %}Editar--Usuario{% endblock %}
+{% block contenido %}
+
+
+<div class="card">
+    <div class="card-header">
+        Editar Usuario
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos del Usuario</h4>
+        {% include 'html/usuario/formUsuario.html' %}
+    </div>
+    <div class="card-footer text-muted">
+        <a class="nav-item nav-link" href="{% url 'listaUsuario' %}">Lista Usuarios</a>
+    </div>
+</div>
+
+
+{% endblock %}

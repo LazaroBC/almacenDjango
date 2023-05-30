@@ -21,10 +21,11 @@ from django.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('laboratorio.urls')),
-    path('inicio/', include('laboratorio.urls')),
-    path('producto/', include('laboratorio.urls')),
-    path('altaProducto/', include('laboratorio.urls')),
-    path('bajaProducto/', include('laboratorio.urls')),
-    path('cambioProducto/', include('laboratorio.urls')),
-    path('listaProducto/', include('laboratorio.urls')),
+    # path('inicio/', include('laboratorio.urls')),
+    # path('producto/', include('laboratorio.urls')),
+    # path('altaProducto/', include('laboratorio.urls')),
+    # path('bajaProducto/', include('laboratorio.urls')),
+    # path('cambioProducto/', include('laboratorio.urls')),
+    # path('listaProducto/', include('laboratorio.urls')),
+    # path('login/', include('laboratorio.urls')),
 ]

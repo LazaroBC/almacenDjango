@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block titulo %}Editar--Producto{% endblock %}
+{% block contenido %}
+
+
+<div class="card">
+    <div class="card-header">
+        Editar Producto
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos del producto</h4>
+        {% include 'html/producto/formProducto.html' %}
+    </div>
+    <div class="card-footer text-muted">
+        <a class="nav-item nav-link" href="{% url 'listaProducto' %}">Lista Productos</a>
+    </div>
+</div>
+
+
+{% endblock %}

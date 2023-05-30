@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block titulo %}Inventario--Usuarios{% endblock %}
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        Usuarios
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Lista de Usuarios</h4>
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col" style="font-size: x-large;">Ref-Usuarios</th>
+                        <th scope="col" style="font-size: x-large;">Nombre</th>
+                        <th scope="col" style="font-size: x-large;">Usuarios</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td style="font-size: large;">Ref-Ciente>
+                        <td style="font-size: large;">Nombre</td>
+                        <td style="font-size: large;">Usuarios</td>
+                        
+                    </tr>
+                    <tr class="">
+                        <td style="font-size: large;">Ref-Usuarios>
+                        <td style="font-size: large;">Nombre</td>
+                        <td style="font-size: large;">Usuarios</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            <button name="alta" id="alta" class="btn btn-outline-success" type="button"> <a href="{% url 'crearUsuario' %}">Alta Usuarios</a></button>
+            <button name="editar" id="editar" class="btn btn-outline-primary" type="button" value="Editar"><a href="{% url 'editarUsuario' %}">Editar Usuarios</a></button>
+            <button name="eliminar" id="eliminar" class="btn btn-outline-danger align-right" type="button" value="Eliminar"><a>Eliminar Usuarios</a></button>
+        </div>
+
+    </div>
+    <div class="card-footer text-muted">
+        Creditos: <a href="https://www.linkedin.com/in/lázaro-belloch-canet/">LBC</a>
+    </div>
+</div>
+
+{% endblock %}

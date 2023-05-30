@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block titulo %}Inventario--Producto{% endblock %}
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        Productos
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Lista de productos</h4>
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col" style="font-size: x-large;">Ref-Fab</th>
+                        <th scope="col" style="font-size: x-large;">Nombre</th>
+                        <th scope="col" style="font-size: x-large;">Producto</th>
+                        <th scope="col" style="font-size: x-large;">Característica</th>
+                        <th scope="col" style="font-size: x-large;">Familia</th>
+                        <th scope="col" style="font-size: x-large;">Tipo</th>
+                        <th scope="col" style="font-size: x-large;">Marca</th>
+                        <th scope="col" style="font-size: x-large;">Un. Entrega</th>
+                        <th scope="col" style="font-size: x-large;">Stock Min</th>
+                        <th scope="col" style="font-size: x-large;">Stock Actual</th>
+                        <th scope="col" style="font-size: x-large;">Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td style="font-size: large;">Ref-Fab>
+                        <td style="font-size: large;">Nombre</td>
+                        <td style="font-size: large;">Producto</td>
+                        <td style="font-size: large;">Característica</td>
+                        <td style="font-size: large;">Familia</td>
+                        <td style="font-size: large;">Tipo</td>
+                        <td style="font-size: large;">Marca</td>
+                        <td style="font-size: large;">Un</td>
+                        <td style="font-size: large;">Stock</td>
+                        <td style="font-size: large;">Stock</td>
+                        <td style="font-size: large;">Precio</td>
+                    </tr>
+                    <tr class="">
+                        <td style="font-size: large;">Ref-Fab>
+                        <td style="font-size: large;">Nombre</td>
+                        <td style="font-size: large;">Producto</td>
+                        <td style="font-size: large;">Característica</td>
+                        <td style="font-size: large;">Familia</td>
+                        <td style="font-size: large;">Tipo</td>
+                        <td style="font-size: large;">Marca</td>
+                        <td style="font-size: large;">Un</td>
+                        <td style="font-size: large;">Stock</td>
+                        <td style="font-size: large;">Stock</td>
+                        <td style="font-size: large;">Precio</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button name="alta" id="alta" class="btn btn-outline-success" type="button"> <a href="{% url 'crearProducto' %}">Alta Producto</a></button>
+            <button name="editar" id="editar" class="btn btn-outline-primary" type="button" value="Editar"><a href="{% url 'editarProducto' %}">Editar Producto</a></button>
+            <button name="eliminar" id="eliminar" class="btn btn-outline-danger align-right" type="button" value="Eliminar"><a>Eliminar Producto</a></button>
+        </div>
+
+    </div>
+    <div class="card-footer text-muted">
+        Creditos: <a href="https://www.linkedin.com/in/lázaro-belloch-canet/">LBC</a>
+    </div>
+</div>
+
+{% endblock %}

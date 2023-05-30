@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block titulo %}Editar--Cliente{% endblock %}
+{% block contenido %}
+
+
+<div class="card">
+    <div class="card-header">
+        Editar Cliente
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos del Cliente</h4>
+        {% include 'html/cliente/formCliente.html' %}
+    </div>
+    <div class="card-footer text-muted">
+        <a class="nav-item nav-link" href="{% url 'listaCliente' %}">Lista Clientes</a>
+    </div>
+</div>
+
+
+{% endblock %}

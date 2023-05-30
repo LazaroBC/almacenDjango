@@ -2,32 +2,51 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.inicio, name='inicio.html'),
-    path('inicio/', views.inicio, name='inicio.html'),
+    path('', views.inicio, name='inicio'),
+    # path('inicio/', views.inicio, name='inicio'),
 
-    path('producto/', views.producto, name='producto.html'),
-    path('altaProducto/', views.altaProducto, name='altaProducto.html'),
-    path('bajaProducto/', views.bajaProducto, name='bajaProducto.html'),
-    path('cambioProducto/', views.cambioProducto, name='cambioProducto.html'),
-    path('listaProducto/', views.listaProducto, name='listaProducto.html'),
+    # path('producto/', views.producto, name='producto'),
+    # path('altaProducto/', views.altaProducto, name='altaProducto'),
+    # path('bajaProducto/', views.bajaProducto, name='bajaProducto'),
+    # path('cambioProducto/', views.cambioProducto, name='cambioProducto'),
+    # path('listaProducto/', views.listaProducto, name='listaProducto'),
 
-    path('cliente/', views.cliente, name='cliente.html'),
-    path('altaCliente/', views.altaCliente, name='altaCliente.html'),
-    path('bajaCliente/', views.bajaCliente, name='bajaCliente.html'),
-    path('cambioCliente/', views.cambioCliente, name='cambioCliente.html'),
-    path('listaCliente/', views.listaCliente, name='listaCliente.html'),
+    # path('cliente/', views.cliente, name='cliente'),
+    # path('altaCliente/', views.altaCliente, name='altaCliente'),
+    # path('bajaCliente/', views.bajaCliente, name='bajaCliente'),
+    # path('cambioCliente/', views.cambioCliente, name='cambioCliente'),
+    # path('listaCliente/', views.listaCliente, name='listaCliente'),
 
-    path('proveedor/', views.proveedor, name='proveedor.html'),
-    path('altaProveedor/', views.altaProveedor, name='altaProveedor.html'),
-    path('bajaProveedor/', views.bajaProveedor, name='bajaProveedor.html'),
-    path('cambioProveedor/', views.cambioProveedor, name='cambioProveedor.html'),
-    path('listaProveedor/', views.listaProveedor, name='listaProveedor.html'),
+    # path('proveedor/', views.proveedor, name='proveedor'),
+    # path('altaProveedor/', views.altaProveedor, name='altaProveedor'),
+    # path('bajaProveedor/', views.bajaProveedor, name='bajaProveedor'),
+    # path('cambioProveedor/', views.cambioProveedor, name='cambioProveedor'),
+    # path('listaProveedor/', views.listaProveedor, name='listaProveedor'),
 
-    path('usuario/', views.usuario, name='usuario.html'),
-    path('altaUsuario/', views.altaUsuario, name='altaUsuario.html'),
-    path('bajaUsuario/', views.bajaUsuario, name='bajaUsuario.html'),
-    path('cambioUsuario/', views.cambioUsuario, name='cambioUsuario.html'),
-    path('listaUsuario/', views.listaUsuario, name='listaUsuario.html'),
+    # path('usuario/', views.usuario, name='usuario'),
+    # path('altaUsuario/', views.altaUsuario, name='altaUsuario'),
+    # path('bajaUsuario/', views.bajaUsuario, name='bajaUsuario'),
+    # path('cambioUsuario/', views.cambioUsuario, name='cambioUsuario'),
+    # path('listaUsuario/', views.listaUsuario, name='listaUsuario'),
 
-    
+    path('login/', views.login, name='login'),
+
+    # Plantillas base y pruebas
+    path('inicio/', views.inicio, name='inicio'),
+    path('listaProducto/', views.listaProducto, name='listaProducto'),
+    path('crearProducto/', views.crearProducto, name='crearProducto'),
+    path('editarProducto/', views.editarProducto, name='editarProducto'),
+
+    path('listaCliente/', views.listaCliente, name='listaCliente'),
+    path('crearCliente/', views.crearCliente, name='crearCliente'),
+    path('editarCliente/', views.editarCliente, name='editarCliente'),
+
+    path('listaProveedor/', views.listaProveedor, name='listaProveedor'),
+    path('crearProveedor/', views.crearProveedor, name='crearProveedor'),
+    path('editarProveedor/', views.editarProveedor, name='editarProveedor'),
+
+    path('listaUsuario/', views.listaUsuario, name='listaUsuario'),
+    path('crearUsuario/', views.crearUsuario, name='crearUsuario'),
+    path('editarUsuario/', views.editarUsuario, name='editarUsuario'),
+
 ]

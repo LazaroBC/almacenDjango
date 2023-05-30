@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block titulo %}Inventario--Cliente{% endblock %}
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        Clientes
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Lista de Clientes</h4>
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col" style="font-size: x-large;">Ref-Cliente</th>
+                        <th scope="col" style="font-size: x-large;">Nombre</th>
+                        <th scope="col" style="font-size: x-large;">Cliente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td style="font-size: large;">Ref-Ciente>
+                        <td style="font-size: large;">Nombre</td>
+                        <td style="font-size: large;">Cliente</td>
+                    </tr>
+                    <tr class="">
+                        <td style="font-size: large;">Ref-cliente>
+                        <td style="font-size: large;">Nombre</td>
+                        <td style="font-size: large;">Cliente</td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <button name="alta" id="alta" class="btn btn-outline-success" type="button"> <a
+                    href="{% url 'crearCliente' %}">Alta Cliente</a></button>
+            <button name="editar" id="editar" class="btn btn-outline-primary" type="button" value="Editar"><a
+                    href="{% url 'editarCliente' %}">Editar Cliente</a></button>
+            <button name="eliminar" id="eliminar" class="btn btn-outline-danger align-right" type="button"
+                value="Eliminar"><a>Eliminar Cliente</a></button>
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        Creditos: <a href="https://www.linkedin.com/in/lázaro-belloch-canet/">LBC</a>
+    </div>
+</div>
+
+{% endblock %}

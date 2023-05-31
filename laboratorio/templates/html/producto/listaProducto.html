@@ -26,37 +26,32 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for producto in productos %}
                     <tr class="">
-                        <td style="font-size: large;">Ref-Fab>
-                        <td style="font-size: large;">Nombre</td>
-                        <td style="font-size: large;">Producto</td>
-                        <td style="font-size: large;">Característica</td>
-                        <td style="font-size: large;">Familia</td>
-                        <td style="font-size: large;">Tipo</td>
-                        <td style="font-size: large;">Marca</td>
-                        <td style="font-size: large;">Un</td>
-                        <td style="font-size: large;">Stock</td>
-                        <td style="font-size: large;">Stock</td>
-                        <td style="font-size: large;">Precio</td>
+                        <td style="font-size: large;">{{producto.id}}</td>
+                        <td style="font-size: large;">{{producto.nombre}}</td>
+                        <td style="font-size: large;">{{producto.caracteristica1}}</td>
+                        <td style="font-size: large;">{{producto.caracteristica1}}</td>
+                        <td style="font-size: large;">{{producto.familia}}</td>
+                        <td style="font-size: large;">{{producto.tipo}}</td>
+                        <td style="font-size: large;">{{producto.marca}}</td>
+                        <td style="font-size: large;">{{producto.u_entrega}}</td>
+                        <td style="font-size: large;">{{producto.stock_min}}</td>
+                        <td style="font-size: large;">{{producto.stock_actual}}</td>
+                        <td style="font-size: large;">{{producto.precio}}</td>
+                        <td>
+                            <button name="eliminar" id="eliminar" class="btn btn-outline-danger boton_peq"
+                                type="button" value="Eliminar"><a>Eliminar</a></button>
+                            <button name="editar" id="editar" class="btn btn-outline-primary boton_peq" type="button"
+                                value="Editar"><a href="{% url 'editarProducto' %}">Editar</a></button>
+                        </td>
                     </tr>
-                    <tr class="">
-                        <td style="font-size: large;">Ref-Fab>
-                        <td style="font-size: large;">Nombre</td>
-                        <td style="font-size: large;">Producto</td>
-                        <td style="font-size: large;">Característica</td>
-                        <td style="font-size: large;">Familia</td>
-                        <td style="font-size: large;">Tipo</td>
-                        <td style="font-size: large;">Marca</td>
-                        <td style="font-size: large;">Un</td>
-                        <td style="font-size: large;">Stock</td>
-                        <td style="font-size: large;">Stock</td>
-                        <td style="font-size: large;">Precio</td>
-                    </tr>
+                    {% endfor %}
+
                 </tbody>
             </table>
-            <button name="alta" id="alta" class="btn btn-outline-success" type="button"> <a href="{% url 'crearProducto' %}">Alta Producto</a></button>
-            <button name="editar" id="editar" class="btn btn-outline-primary" type="button" value="Editar"><a href="{% url 'editarProducto' %}">Editar Producto</a></button>
-            <button name="eliminar" id="eliminar" class="btn btn-outline-danger align-right" type="button" value="Eliminar"><a>Eliminar Producto</a></button>
+            <button name="alta" id="alta" class="btn btn-outline-success" type="button"> <a
+                    href="{% url 'crearProducto' %}">Alta Producto</a></button>
         </div>
 
     </div>

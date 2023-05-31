@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from .models import producto, cliente, proveedor, usuario
 # Create your views here.
 
 # def inicio(request):
@@ -79,7 +79,8 @@ def inicio(request):
 
 # Productos
 def listaProducto(request):
-    return render(request, 'html/producto/listaProducto.html')
+    productos = producto.objects.all()
+    return render(request, 'html/producto/listaProducto.html',{'productos':productos})
 
 def crearProducto(request):
     return render(request, 'html/producto/crearProducto.html')
@@ -90,7 +91,8 @@ def editarProducto(request):
 # Clientes
 
 def listaCliente(request):
-    return render(request, 'html/cliente/listaCliente.html')
+    clientes = cliente.objects.all()
+    return render(request, 'html/cliente/listaCliente.html',{'clientes':clientes})
 
 def crearCliente(request):
     return render(request, 'html/cliente/crearCliente.html')
@@ -101,7 +103,9 @@ def editarCliente(request):
 # Proveedores
 
 def listaProveedor(request):
-    return render(request, 'html/proveedor/listaProveedor.html')
+    proveedores = proveedor.objects.all()
+    print(proveedores)
+    return render(request, 'html/proveedor/listaProveedor.html',{'proveedores':proveedores})
 
 def crearProveedor(request):
     return render(request, 'html/proveedor/crearProveedor.html')
@@ -112,7 +116,8 @@ def editarProveedor(request):
 # Usuarios
 
 def listaUsuario(request):
-    return render(request, 'html/usuario/listaUsuario.html')
+    usuarios = usuario.objects.all()
+    return render(request, 'html/usuario/listaUsuario.html',{'usuarios':usuarios})
 
 def crearUsuario(request):
     return render(request, 'html/usuario/crearUsuario.html')

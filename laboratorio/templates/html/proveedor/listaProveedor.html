@@ -19,18 +19,13 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for proveedor in proveedores %}
                     <tr class="">
-                        <td style="font-size: large;">Ref-Ciente>
-                        <td style="font-size: large;">Nombre</td>
-                        <td style="font-size: large;">Proveedor</td>
-                        
+                        <td style="font-size: large;">{{proveedor.id}}</td>
+                        <td style="font-size: large;">{{proveedor.nombre}}</td>
+                        <td style="font-size: large;">{{proveedor.email}}</td>
                     </tr>
-                    <tr class="">
-                        <td style="font-size: large;">Ref-Proveedor>
-                        <td style="font-size: large;">Nombre</td>
-                        <td style="font-size: large;">Proveedor</td>
-                        
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
             <button name="alta" id="alta" class="btn btn-outline-success" type="button"> <a href="{% url 'crearProveedor' %}">Alta Proveedor</a></button>

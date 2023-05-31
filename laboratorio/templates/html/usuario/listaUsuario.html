@@ -15,27 +15,27 @@
                         <th scope="col" style="font-size: x-large;">Ref-Usuarios</th>
                         <th scope="col" style="font-size: x-large;">Nombre</th>
                         <th scope="col" style="font-size: x-large;">Usuarios</th>
-                        
+                        <th scope="col" class="align-center" style="font-size: x-large;">Acción</th>
                     </tr>
                 </thead>
                 <tbody>
+                    {% for usuario in usuarios %}
                     <tr class="">
-                        <td style="font-size: large;">Ref-Ciente>
-                        <td style="font-size: large;">Nombre</td>
-                        <td style="font-size: large;">Usuarios</td>
-                        
+                        <td style="font-size: large;">{{usuario.id}}</td>
+                        <td style="font-size: large;">{{usuario.nombre}}</td>
+                        <td style="font-size: large;">{{usuario.email}}</td>
+                        <td>
+                            <button name="eliminar" id="eliminar" class="btn btn-outline-danger align-right"
+                                type="button" value="Eliminar"><a>Eliminar</a></button>
+                            <button name="editar" id="editar" class="btn btn-outline-primary align-right" type="button"
+                                value="Editar"><a href="{% url 'editarUsuario' %}">Editar</a></button>
+                        </td>
                     </tr>
-                    <tr class="">
-                        <td style="font-size: large;">Ref-Usuarios>
-                        <td style="font-size: large;">Nombre</td>
-                        <td style="font-size: large;">Usuarios</td>
-                        
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
-            <button name="alta" id="alta" class="btn btn-outline-success" type="button"> <a href="{% url 'crearUsuario' %}">Alta Usuarios</a></button>
-            <button name="editar" id="editar" class="btn btn-outline-primary" type="button" value="Editar"><a href="{% url 'editarUsuario' %}">Editar Usuarios</a></button>
-            <button name="eliminar" id="eliminar" class="btn btn-outline-danger align-right" type="button" value="Eliminar"><a>Eliminar Usuarios</a></button>
+            <button name="alta" id="alta" class="btn btn-outline-success" type="button"> <a
+                    href="{% url 'crearUsuario' %}">Alta Usuarios</a></button>
         </div>
 
     </div>

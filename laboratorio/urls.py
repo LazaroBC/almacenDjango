@@ -35,18 +35,22 @@ urlpatterns = [
     path('inicio/', views.inicio, name='inicio'),
     path('listaProducto/', views.listaProducto, name='listaProducto'),
     path('crearProducto/', views.crearProducto, name='crearProducto'),
-    path('editarProducto/', views.editarProducto, name='editarProducto'),
+    path('editarProducto/<int:id>', views.editarProducto, name='editarProducto'),
+    path('eliminarProducto/<int:id>', views.eliminarProducto, name='eliminarProducto'),
 
     path('listaCliente/', views.listaCliente, name='listaCliente'),
     path('crearCliente/', views.crearCliente, name='crearCliente'),
-    path('editarCliente/', views.editarCliente, name='editarCliente'),
+    path('editarCliente/<int:id>', views.editarCliente, name='editarCliente'),
+    path('eliminarCliente/<int:id>', views.eliminarCliente, name='eliminarCliente'),
 
     path('listaProveedor/', views.listaProveedor, name='listaProveedor'),
     path('crearProveedor/', views.crearProveedor, name='crearProveedor'),
-    path('editarProveedor/', views.editarProveedor, name='editarProveedor'),
+    path('editarProveedor/<int:id>', views.editarProveedor, name='editarProveedor'),
+    path('eliminarProveedor/<int:id>', views.eliminarProveedor, name='eliminarProveedor'),
 
     path('listaUsuario/', views.listaUsuario, name='listaUsuario'),
     path('crearUsuario/', views.crearUsuario, name='crearUsuario'),
-    path('editarUsuario/', views.editarUsuario, name='editarUsuario'),
+    path('editarUsuario/<int:id>', views.editarUsuario, name='editarUsuario'),
+    path('eliminarUsuario/<int:id>', views.eliminarUsuario, name='eliminarUsuario'),
 
 ]

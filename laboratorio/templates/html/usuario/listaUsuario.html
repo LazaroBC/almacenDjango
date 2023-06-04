@@ -25,10 +25,10 @@
                         <td style="font-size: large;">{{usuario.nombre}}</td>
                         <td style="font-size: large;">{{usuario.email}}</td>
                         <td>
-                            <button name="eliminar" id="eliminar" class="btn btn-outline-danger align-right"
-                                type="button" value="Eliminar"><a>Eliminar</a></button>
-                            <button name="editar" id="editar" class="btn btn-outline-primary align-right" type="button"
-                                value="Editar"><a href="{% url 'editarUsuario' %}">Editar</a></button>
+                            <a name="eliminar" id="eliminar" class="btn btn-outline-danger boton_peq align-right"
+                                type="button" value="Eliminar" href="{% url 'eliminarUsuario' usuario.id%}">Eliminar</a>
+                            <a name="editar" id="editar" class="btn btn-outline-primary boton_peq align-right" type="button"
+                                value="Editar" href="{% url 'editarUsuario' usuario.id%}">Editar</a>
                         </td>
                     </tr>
                     {% endfor %}

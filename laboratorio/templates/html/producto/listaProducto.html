@@ -8,52 +8,51 @@
     </div>
     <div class="card-body">
         <h4 class="card-title">Lista de productos</h4>
-        <div class="table-responsive">
+        <div class="table-responsive text-lista-prod">
             <table class="table table-primary">
                 <thead>
                     <tr>
-                        <th scope="col" style="font-size: x-large;">Ref-Fab</th>
-                        <th scope="col" style="font-size: x-large;">Nombre</th>
-                        <th scope="col" style="font-size: x-large;">Producto</th>
-                        <th scope="col" style="font-size: x-large;">Característica</th>
-                        <th scope="col" style="font-size: x-large;">Familia</th>
-                        <th scope="col" style="font-size: x-large;">Tipo</th>
-                        <th scope="col" style="font-size: x-large;">Marca</th>
-                        <th scope="col" style="font-size: x-large;">Un. Entrega</th>
-                        <th scope="col" style="font-size: x-large;">Stock Min</th>
-                        <th scope="col" style="font-size: x-large;">Stock Actual</th>
-                        <th scope="col" style="font-size: x-large;">Precio</th>
+                        <th scope="col">Ref-Fab</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Característica</th>
+                        <th scope="col">Familia</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Un. Entrega</th>
+                        <th scope="col">Stock Min</th>
+                        <th scope="col">Stock Actual</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Acción</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for producto in productos %}
                     <tr class="">
-                        <td style="font-size: large;">{{producto.id}}</td>
-                        <td style="font-size: large;">{{producto.nombre}}</td>
-                        <td style="font-size: large;">{{producto.caracteristica1}}</td>
-                        <td style="font-size: large;">{{producto.caracteristica1}}</td>
-                        <td style="font-size: large;">{{producto.familia}}</td>
-                        <td style="font-size: large;">{{producto.tipo}}</td>
-                        <td style="font-size: large;">{{producto.marca}}</td>
-                        <td style="font-size: large;">{{producto.u_entrega}}</td>
-                        <td style="font-size: large;">{{producto.stock_min}}</td>
-                        <td style="font-size: large;">{{producto.stock_actual}}</td>
-                        <td style="font-size: large;">{{producto.precio}}</td>
+                        <td>{{producto.id}}</td>
+                        <td>{{producto.nombre}}</td>
+                        <td>{{producto.caracteristica1}}</td>
+                        <td>{{producto.caracteristica1}}</td>
+                        <td>{{producto.familia}}</td>
+                        <td>{{producto.tipo}}</td>
+                        <td>{{producto.marca}}</td>
+                        <td>{{producto.u_entrega}}</td>
+                        <td>{{producto.stock_min}}</td>
+                        <td>{{producto.stock_actual}}</td>
+                        <td>{{producto.precio}}</td>
                         <td>
-                            <button name="eliminar" id="eliminar" class="btn btn-outline-danger boton_peq"
-                                type="button" value="Eliminar"><a>Eliminar</a></button>
-                            <button name="editar" id="editar" class="btn btn-outline-primary boton_peq" type="button"
-                                value="Editar"><a href="{% url 'editarProducto' %}">Editar</a></button>
+                            <a name="eliminar" id="eliminar" class="btn btn-outline-danger boton_peq align-right "
+                                type="button" value="Eliminar" href="{% url 'eliminarProducto' producto.id %}">Eliminar</a>
+                            <a name="editar" id="editar" class="btn btn-outline-primary boton_peq align-right "
+                                type="button" value="Editar" href="{% url 'editarProducto' producto.id%}">Editar</a>
                         </td>
                     </tr>
                     {% endfor %}
-
                 </tbody>
             </table>
             <button name="alta" id="alta" class="btn btn-outline-success" type="button"> <a
                     href="{% url 'crearProducto' %}">Alta Producto</a></button>
         </div>
-
     </div>
     <div class="card-footer text-muted">
         Creditos: <a href="https://www.linkedin.com/in/lázaro-belloch-canet/">LBC</a>

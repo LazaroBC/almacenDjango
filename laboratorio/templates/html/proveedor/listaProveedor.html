@@ -4,33 +4,38 @@
 
 <div class="card">
     <div class="card-header">
-        Proveedors
+        Proveedores
     </div>
     <div class="card-body">
-        <h4 class="card-title">Lista de Proveedors</h4>
+        <h4 class="card-title">Lista de Proveedores</h4>
         <div class="table-responsive">
-            <table class="table table-primary">
+            <table class="table table-primary text-lista-cli">
                 <thead>
                     <tr>
-                        <th scope="col" style="font-size: x-large;">Ref-Proveedor</th>
-                        <th scope="col" style="font-size: x-large;">Nombre</th>
-                        <th scope="col" style="font-size: x-large;">Proveedor</th>
-                        
+                        <th scope="col">Ref-Proveedor</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Proveedor</th>
+
                     </tr>
                 </thead>
                 <tbody>
                     {% for proveedor in proveedores %}
                     <tr class="">
-                        <td style="font-size: large;">{{proveedor.id}}</td>
-                        <td style="font-size: large;">{{proveedor.nombre}}</td>
-                        <td style="font-size: large;">{{proveedor.email}}</td>
+                        <td>{{proveedor.id}}</td>
+                        <td>{{proveedor.nombre}}</td>
+                        <td>{{proveedor.email}}</td>
+                        <td>
+                            <a name="eliminar" id="eliminar" class="btn btn-outline-danger boton_peq align-right"
+                                type="button" value="Eliminar" href="{% url 'eliminarProveedor' proveedor.id%}">Eliminar</a>
+                            <a name="editar" id="editar" class="btn btn-outline-primary boton_peq align-right"
+                                type="button" value="Editar" href="{% url 'editarProveedor' proveedor.id %}">Editar</a>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
-            <button name="alta" id="alta" class="btn btn-outline-success" type="button"> <a href="{% url 'crearProveedor' %}">Alta Proveedor</a></button>
-            <button name="editar" id="editar" class="btn btn-outline-primary" type="button" value="Editar"><a href="{% url 'editarProveedor' %}">Editar Proveedor</a></button>
-            <button name="eliminar" id="eliminar" class="btn btn-outline-danger align-right" type="button" value="Eliminar"><a>Eliminar Proveedor</a></button>
+            <button name="alta" id="alta" class="btn btn-outline-success" type="button"> <a
+                    href="{% url 'crearProveedor' %}">Alta Proveedor</a></button>
         </div>
 
     </div>

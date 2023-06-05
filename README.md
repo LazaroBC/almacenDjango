@@ -3,6 +3,7 @@
 hasta 30/05/2023 ---> 11
 31/05/2023 --> 2
 03/06/2023 --> 4
+14/06/2023 --> 4
 
 conda deactivate
 mkvirtualenv almacenDjango

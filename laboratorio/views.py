@@ -83,9 +83,8 @@ def inicio(request):
 
 
 # Productos
-
-def listaProducto(request):
-    productos = producto.objects.all()
+def listaProducto(request):    
+    productos = producto.objects.all()    
     return render(request, 'html/producto/listaProducto.html', {'productos': productos})
 
 def crearProducto(request):

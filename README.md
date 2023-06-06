@@ -10,3 +10,6 @@ sudo systemctl start mysql
 python3 manage.py runserver
 
 
+Errores:
+Proveedor edit no funciona
+Crear formulario edit con value correcto

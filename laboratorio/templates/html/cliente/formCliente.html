@@ -9,7 +9,7 @@
                id="{{ campo.id_for_label }}" 
                aria-describedby="helpId"
                placeholder="{{ campo.label }}"
-               value="{{campo.label}}">
+               value="{{ campo.value | default_if_none:'' }}">
     </div>
     {% endfor %}
     <div class="col-12 help-text">

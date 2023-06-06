@@ -3,17 +3,15 @@
     {% for campo in formulario %}
     <div class="mb-3">
         <label for="" class="form-label">{{campo.label}}</label>
-        <input type="{{ campo.field.widget.input_type }}" 
-               class="form-control" 
-               name="{{ campo.name }}" 
-               id="{{ campo.id_for_label }}" 
-               aria-describedby="helpId"
-               placeholder="{{ campo.label }}"
-               value="{{ campo.value | default_if_none:'' }}">
+        <input type="{{ campo.field.widget.input_type }}" class="form-control" name="{{ campo.name }}"
+            id="{{ campo.id_for_label }}" aria-describedby="helpId" placeholder="{{ campo.label }}"
+            value="{{ campo.value | default_if_none:'' }}">
+    </div>
+    <div class="col-12 help-text errores ">
+        {{campo.errors}}
     </div>
     {% endfor %}
-    <div class="col-12 help-text">
-        {{campo.errors}}
-        <input name="" id="" class="btn btn-outline-success" type="submit" value="Enviar información">
-    </div>
+
+    <input name="" id="" class="btn btn-outline-success" type="submit" value="Enviar información">
+
 </form>

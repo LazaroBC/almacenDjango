@@ -11,7 +11,9 @@
                placeholder="{{ campo.label }}"
                value="{{ campo.value | default_if_none:'' }}">
     </div>
-    
+    <div class="col-12 help-text errores ">
+        {{campo.errors}}
+    </div>
     {% endfor %}
     <div class="col-12 help-text">
         {{campo.errors}}

@@ -29,7 +29,7 @@ class usuario(models.Model):
     id           = models.AutoField(primary_key=True)
     nombre       = models.CharField(max_length=30, null=True, blank=True, verbose_name="Nombre")
     apellido     = models.CharField(max_length=30, null=True, blank=True, verbose_name="Apellido")
-    email        = models.CharField(max_length=30, null=True, blank=True, verbose_name="Email")
+    email        = models.EmailField(max_length=254, null=True, blank=True, verbose_name="Email")
     password     = models.CharField(max_length=30, null=True, blank=True, verbose_name="Password")
     fecha_alta   = models.DateField(null=True, blank=True, verbose_name="Fecha de alta AAAA-MM-DD")
     fecha_baja   = models.DateField(null=True, blank=True, verbose_name="Fecha de baja AAAA-MM-DD")
@@ -41,7 +41,7 @@ class usuario(models.Model):
 class cliente(models.Model):
     id         = models.AutoField(primary_key=True)
     nombre     = models.CharField(max_length=30, null=True, blank=True, verbose_name="Nombre")
-    email      = models.CharField(max_length=30, null=True, blank=True, verbose_name="Email")
+    email      = models.EmailField(max_length=254, null=True, blank=True, verbose_name="Email")
     password   = models.CharField(max_length=30, null=True, blank=True, verbose_name="Password")
     fecha_alta = models.DateField(null=True, blank=True, verbose_name="Fecha de alta AAAA-MM-DD")
     fecha_baja = models.DateField(null=True, blank=True, verbose_name="Fecha de baja AAAA-MM-DD")
@@ -51,7 +51,7 @@ class cliente(models.Model):
 class proveedor(models.Model):
     id         = models.AutoField(primary_key=True)
     nombre     = models.CharField(max_length=30, null=True, blank=True, verbose_name="Nombre")
-    email      = models.CharField(max_length=30, null=True, blank=True, verbose_name="Email")
+    email      = models.EmailField(max_length=254, null=True, blank=True, verbose_name="Email")
     fecha_alta = models.DateField(null=True, blank=True, verbose_name="Fecha de alta AAAA-MM-DD")
     fecha_baja = models.DateField(null=True, blank=True, verbose_name="Fecha de baja AAAA-MM-DD")
     def __str__(self):

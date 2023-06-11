@@ -13,7 +13,7 @@ class producto(models.Model):
     marca           = models.CharField(max_length=30, null=True, blank=True, verbose_name="Marca")
     u_entrega       = models.CharField(max_length=30, null=True, blank=True, verbose_name="Unidad de entrega")
     stock_min       = models.IntegerField(null=True, blank=True, verbose_name="Stock minimo")
-    stock_actual    = models.IntegerField( null=True, blank=True, verbose_name="Stock actual")
+    stock_actual    = models.IntegerField(null=True, blank=True, verbose_name="Stock actual")
     precio          = models.IntegerField(null=True, blank=True,verbose_name="Precio")
     cantidad        = models.IntegerField(null=True, blank=True,verbose_name="Cantidad")
     albaran         = models.CharField(max_length=30, null=True, blank=True,verbose_name="Albaran")
